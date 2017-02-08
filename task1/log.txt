@@ -1,0 +1,11 @@
+commit ea78a0263cf8b2300e7bb8299b69f4a260a4123a
+Author: Ilya Molochko <ilja.molochko97@gmail.com>
+Date:   Wed Feb 8 18:52:41 2017 +0300
+
+    add status.txt
+
+commit 98e37cda583b6edb76774b68e35ec29c3318c960
+Author: Ilya Molochko <ilja.molochko97@gmail.com>
+Date:   Wed Feb 8 18:45:49 2017 +0300
+
+    add .gitignore
