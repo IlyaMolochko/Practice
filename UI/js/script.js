@@ -1,6 +1,4 @@
-/**
- * Created by Lenovo z50-70 on 22.02.2017.
- */
+
 
 var elem = document.querySelector('#burger_menu_id');
 var burgerButton = document.getElementById('burger')

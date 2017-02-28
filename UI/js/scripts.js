@@ -1,6 +1,4 @@
-/**
- * Created by Lenovo z50-70 on 22.02.2017.
-*/
+
 ;
 var view = {
     showBurgerMenu: function () {
