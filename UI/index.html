@@ -1,310 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<title>Our-news</title>
 	<link rel="stylesheet" href="css/styles.css" type="text/css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
+	<title>Our-news</title>
 </head>
 <body>
-	<div id="wrapper">
-		<div id="content">
-			<header>
-				<a href=""><img src="images/logo.png" alt="Our-news logo"></a>
-				<form name="search" action="#" method="get">
-					<input type="text" name="q" placeholder="Поиск"><button type="submit">Искать</button>
-				</form>
-			</header>
-				<nav>
-					<div id="burger"><img id="burger_button" src="images/burger.png"></div>
+	<div class="wrapper">
+		
+		<div class="content">
 
-					<ul class="top-menu">
+			<header>	
+				<div class="header-logo">
+	                <a href="index.html" title="На главную">
+	                    <img src="images/logo.png" alt="Our-news logo">
+	                    <form name="search" action="#" method="get">
+							<input type="text" name="q" placeholder="Поиск"><button type="submit">Искать</button>
+						</form>                
+	                </a>
+	            </div>
+			</header>
+
+			<nav>
+
+				<ul class="top-menu">
 						<div>
 							<li class="active">Главная</li>
 							<li><a href="">Добавить новость</a></li>
-
-							<li class="signOut"><a href="">Выход</a></li>
-							<li class="userName"><a href="">Иванов Иван</a>
-							
+							<li class="sign-in" onclick="singIn()"><a>Войти</a></li>					
+									
 						</div>					
-					</ul>
+				</ul>
 
-					<div id="burger_menu_id" class="burger_menu">
-	                    <div id="burger_list">
-	                        <a href="">Главная</a><hr>
-	                        <a href="">Добавить новость</a><hr>
-	                        <a href="">Спорт</a><hr>
-	                        <a href="">Политика</a><hr>
-	                        <a href="">Кино</a><hr>
-	                        <a href="">Театр</a><hr>
-	                        <a href="">Происшествия</a><hr>
-	                        <a href="">Общество</a><hr> 
-	                        <a href="">Выйти</a>
-	                    </div>          
-	                        
-	                </div>
-				</nav>
-					<div id="heading">
-						<h1>Главная</h1>
-					</div>
-					<aside>
-						<ul class="aside-menu">						
-							<br>
-							<b>Введите имя автора:<b/><br>
-							<br>
-							<input type="text" name="firstname">
-							<br>
-							<b>Выберите теги:</b><br>
-							<br>
-							<select name="tags">
-								<option value="not selected">Не выбран</option>
-								<option value="sport">Спорт</option>
-								<option value="policy">Политика</option>
-								<option value="economy">Экономика</option>
-								<option value="movie">Кино</option>
-								<option value="theatre">Театр</option>
-								<option value="incident">Происшествия</option>
-								<option value="society">Общество</option>
-							</select><br>
-							<br>
-							<select name="tags">
-								<option value="not selected">Не выбран</option>
-								<option value="sport">Спорт</option>
-								<option value="policy">Политика</option>
-								<option value="economy">Экономика</option>
-								<option value="movie">Кино</option>
-								<option value="theatre">Театр</option>
-								<option value="incident">Происшествия</option>
-								<option value="society">Общество</option>
-							</select><br>
-							<br>
-							<select name="tags">
-								<option value="not selected">Не выбран</option>
-								<option value="sport">Спорт</option>
-								<option value="policy">Политика</option>
-								<option value="economy">Экономика</option>
-								<option value="movie">Кино</option>
-								<option value="theatre">Театр</option>
-								<option value="incident">Происшествия</option>
-								<option value="society">Общество</option>
-							</select><br>
-							<br>
-							<select name="tags">
-								<option value="not selected">Не выбран</option>
-								<option value="sport">Спорт</option>
-								<option value="policy">Политика</option>
-								<option value="economy">Экономика</option>
-								<option value="movie">Кино</option>
-								<option value="theatre">Театр</option>
-								<option value="incident">Происшествия</option>
-								<option value="society">Общество</option>
-							</select><br>
-							<br>
-							<select name="tags">
-								<option value="not selected">Не выбран</option>
-								<option value="sport">Спорт</option>
-								<option value="policy">Политика</option>
-								<option value="economy">Экономика</option>
-								<option value="movie">Кино</option>
-								<option value="theatre">Театр</option>
-								<option value="incident">Происшествия</option>
-								<option value="society">Общество</option>
-							</select><br>
-							<br>
-							<button type="submit">Применить фильтр</button><br>
-							<br>
-						</ul>
-					</aside>
-					  
+				<div class="filter-bar">
+            		<div class="filter-item filter-date">Фильтр по дате: от: <input type="date" /> до: <input type="date" /></div>
+            		<div class="filter-item filter-author">Фильтр по автору: <select><option>Все</option><option>Молочко Илья</option></select></div>
+            		<div class="filter-item filter-tag">Выберите тег: 
+	            		<select>
+		            		<option>Не выбран</option>
+		            		<option>В мире</option>
+		            		<option>Спорт</option>
+		            		<option>Политика</option>
+		            		<option>Общество</option>
+		            		<option>Технологии</option>
+		            		<option>Наука</option>
+		            		<option>Происшествия</option>
+	            		</select>
+            		</div>
+            		<button>Применить</button>
+        		</div>
+			</nav>
 			<main>
-	            <div id="news">
+            	<div id="news"></div>
+            		
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/unemployment.png" title="Unemployment" alt="Unemployment">
-	                        </a>
-	                    </div>
+	            	
+	            	<div class="pagination">
+	                <a href=""><</a>
+	                <a id="current_page" href="">1</a>
+	                <a href="">2</a>
+	                <a href="">3</a>
+	                <a href="">4</a>
+	                <a href="">5</a>
+	                ...
+	                <a href="">></a>
+	                <a href="">последняя</a>
+	                <div style="clear: both;"><br></div>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Снова в минусе. В январе предприятия активнее увольняли, чем принимали на работу</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        В январе предприятия уволили 44,6 тысячи человек, сообщает Белстат. При этом организации трудоустроили в прошлом месяце почти на 4,7 тысячи человек меньше, чем «ушли». Для сравнения: год назад уволенных было на 7,6 тысячи больше, чем принятых на работу, а два года назад — на 5,8 тысячи больше. В статистике не учитываются микроорганизации и малые предприятия без ведомственной подчиненности.
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество</a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	            <div id="news">
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/society.png" title="society" alt="society">
-	                        </a>
-	                    </div>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Прокурор попросил для Казакевича 15 лет. Обвиняемый: "Еще вернусь, чтобы закончить начатое"</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        Во время суда 18-летний Влад Казакевич полностью признал свою вину, но не раскаялся. Он пожалел лишь о том, что жертв было мало. Наказание молодой человек будет отбывать в колонии не усиленного, а общего режима, так как преступление совершил в несовершеннолетнем возрасте. <a href="">Подробнее...</a>
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество | </a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	            <div id="news">
+            	</div>
+        	</main>           
+		</div>
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/unemployment.png" title="Unemployment" alt="Unemployment">
-	                        </a>
-	                    </div>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Снова в минусе. В январе предприятия активнее увольняли, чем принимали на работу</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        В январе предприятия уволили 44,6 тысячи человек, сообщает Белстат. При этом организации трудоустроили в прошлом месяце почти на 4,7 тысячи человек меньше, чем «ушли». Для сравнения: год назад уволенных было на 7,6 тысячи больше, чем принятых на работу, а два года назад — на 5,8 тысячи больше. В статистике не учитываются микроорганизации и малые предприятия без ведомственной подчиненности.
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество</a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	            <div id="news">
+		<template id="template-article-list-item">
+		    <div class="article-list-item" data-id="id">
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/society.png" title="society" alt="society">
-	                        </a>
-	                    </div>
+		        <div class="article-list-item-left">
+		            <img class="article-list-item-img" src="images/society.png"><img>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Прокурор попросил для Казакевича 15 лет. Обвиняемый: "Еще вернусь, чтобы закончить начатое"</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        Во время суда 18-летний Влад Казакевич полностью признал свою вину, но не раскаялся. Он пожалел лишь о том, что жертв было мало. Наказание молодой человек будет отбывать в колонии не усиленного, а общего режима, так как преступление совершил в несовершеннолетнем возрасте. <a href="">Подробнее...</a>
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество | </a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	            <div id="news">
+		        </div>
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/unemployment.png" title="Unemployment" alt="Unemployment">
-	                        </a>
-	                    </div>
+		        <div class="article-list-item-right">
+		            <a class="article-list-item-title">
+		                Заголовок статьи
+		            </a>
+		            <br>
+		            <br>
+		            <p class="article-list-item-summary">
+		                Краткое описание для статьи. Тут краткое описание
+		            </p>
+		            <div class="article-list-item-meta">
+		                <a class="article-list-item-date">12.12.1995 04:35</a>
+		                <a class="article-list-item-author">Молочко Илья</a>
+		            </div>
+		            <div class="article-list-item-tags">
+		                <a id="article-list-item-tags-first"></a>
+		                <a id="article-list-item-tags-second"></a>
+		                <a id="article-list-item-tags-third"></a>
+		                <a id="article-list-item-tags-fourth"></a>
+		                <a id="article-list-item-tags-fifth"></a>
+		                <a id="article-list-item-tags-sixth"></a>
+		                <a id="article-list-item-tags-seventh"></a>
+		            </div>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Снова в минусе. В январе предприятия активнее увольняли, чем принимали на работу</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        В январе предприятия уволили 44,6 тысячи человек, сообщает Белстат. При этом организации трудоустроили в прошлом месяце почти на 4,7 тысячи человек меньше, чем «ушли». Для сравнения: год назад уволенных было на 7,6 тысячи больше, чем принятых на работу, а два года назад — на 5,8 тысячи больше. В статистике не учитываются микроорганизации и малые предприятия без ведомственной подчиненности.
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество | </a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	            <div id="news">
+		        </div>
 
-	                <div class="article">
-	                    <div class="article_left">
-	                        <a href="index.html">
-	                        	<hr>
-	                            <img class="article_img" src="images/society.png" title="society" alt="society">
-	                        </a>
-	                    </div>
 
-	                    <div class="article_right">
-	                        <a class="article_heading">Прокурор попросил для Казакевича 15 лет. Обвиняемый: "Еще вернусь, чтобы закончить начатое"</a>
-	                        <br>
-	                        <br>
-	                        <span class="article_short_info">
-	                        Во время суда 18-летний Влад Казакевич полностью признал свою вину, но не раскаялся. Он пожалел лишь о том, что жертв было мало. Наказание молодой человек будет отбывать в колонии не усиленного, а общего режима, так как преступление совершил в несовершеннолетнем возрасте. <a href="">Подробнее...</a>
-	                        </span>
-	                        <br>
-	                        <div class="article_links">
-	                            <a class="article_topic">Общество | </a>
-	                            <a class="article_date">27 Февраля 2017 | 22:07 </a>
-	                            <a href=""> Молочко Илья</a>
-	                        </div>
-	                        <br>
-	                        <br>
-	                    </div>
-	                </div>
-	            <div>
-	        </main>
+		    </div>
+		</template>
+		
 
-			
-
-	<footer>
-		<div id="footer">
-			<div id="footer-logo">
-				<a href="/" name="img_logo"><img src="images/logo.png" alt="Our-news"></a>
-				<p> © created by Ilya Molochko</p>
-			</div>
-			<p>Молочко Илья 2 курс 7 группа</p><br>
-			<p>Ilja.molochko97@gmail.com</p>
-</div>
+		<footer>
+	        <footer class="footer-first">
+	            <br>
+	            <p class="footer-first-text-info">Our-news.by</p>
+	            <p class="footer-first-text-author">© created by Ilya Molochko</p>
+	            <br>
+	        </footer>
+	        <footer class="footer-second">
+	            <p class="footer-second-text-info">
+	                ФПМИ, 2 курс, 7 группа<br>
+	                Ilja.molochko97@gmail.com <br>
+	                Последнее изменение 13.03.2017
+	            </p>
+	        </footer>
+    	</footer>
 	</div>
-</footer>
-	<script src="js/script.js"></script>
-	<script src="js/console.js"></script>
+	<script src="js/articles.js"></script>
 </body>
 </html>
